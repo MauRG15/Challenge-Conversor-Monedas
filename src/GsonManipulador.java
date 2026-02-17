@@ -10,4 +10,11 @@ public class GsonManipulador {
         ConversorMoneda moneda = gson.fromJson(json, ConversorMoneda.class);
         return moneda;
     }
+    public Currencies deserializarGSON_Currencies(String json){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        //Definir el tipo de objeto a convertir
+        Currencies currencies = gson.fromJson(json, Currencies.class);
+        return currencies;
+    }
 }

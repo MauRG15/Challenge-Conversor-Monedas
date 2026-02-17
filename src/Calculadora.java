@@ -7,6 +7,7 @@ public class Calculadora {
     public double conversion(ConversorMoneda jsonObjt, double cantidad){
         tasaConversion = jsonObjt.conversion_rate();
         resultado = tasaConversion*cantidad;
+        resultado = Math.round(resultado * 1000.0) / 1000.0; // Redondeado a 2 decimales
         return resultado;
     }
 }

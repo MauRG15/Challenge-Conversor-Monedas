@@ -54,7 +54,12 @@ public class Main {
                         //System.out.println(jsonAObjeto);//Estado del objeto JSON
                         Calculadora calculadora = new Calculadora();
                         resultadoConversion = calculadora.conversion(jsonAObjeto, cantidad);
-                        System.out.printf("$%,.3f%n",resultadoConversion);
+                        System.out.printf("%nRESULTADO %n$%,.2f %s ==> $%,.2f %s%n",
+                                cantidad,
+                                monedaActual.toUpperCase(),
+                                resultadoConversion,
+                                monedaTarget.toUpperCase());
+
                     }
                     else{
                         System.out.println("No se pudo encontrar el codigo de alguna de las monedas, por favor verifica que las escribiste correctamente e intentalo de nuevo.");

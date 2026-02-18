@@ -10,19 +10,19 @@ public class Main {
         String monedaTarget;
         double resultadoConversion;
         String eleccionUsuario;
-        String apiKey = "09a76998f04a261837f2087d";
+        String apiKey = "";//COLOCA TU PROPIA API KEY EN ESTA VARIABLE
         Scanner scanner = new Scanner(System.in);
 
         //Mostrar Monedas
         MenuUsuario menu = new MenuUsuario();
-        menu.mostrarCurrencies();
+        menu.mostrarCurrencies(apiKey);
 
         while (ciclo) {
             menu.mostrarMenu();
             eleccionUsuario = scanner.nextLine();
             switch (eleccionUsuario) {
                 case "1":
-                    menu.mostrarCurrencies();
+                    menu.mostrarCurrencies(apiKey);
                     break;
                 case "2":
                     //Recibir datos de usuario

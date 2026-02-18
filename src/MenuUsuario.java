@@ -1,10 +1,9 @@
 import java.util.List;
 
 public class MenuUsuario {
-    public void mostrarCurrencies(){
+    public void mostrarCurrencies(String apiKey){
         String respuestaAPI;
         Currencies jsonAObjeto;
-        String apiKey = "09a76998f04a261837f2087d";
 
         //Consumir API
         String direccion = "https://v6.exchangerate-api.com/v6/"+apiKey+"/codes";
